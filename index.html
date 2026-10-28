@@ -312,7 +312,17 @@ button,input,select,textarea{font:inherit;color:inherit}
   <section id="view-notes" hidden style="flex-direction:column;gap:16px">
     <div class="notes">
       <article class="rel">
-        <div class="rel-head"><span class="ver">v1.2</span><span class="date">2026.10.24</span><span class="latest">최신</span></div>
+        <div class="rel-head"><span class="ver">v1.3</span><span class="date">2026.10.28</span><span class="latest">최신</span></div>
+        <p class="rel-sum">산성비 일시정지와 긴 명령어 화면을 고쳤어요.</p>
+        <div class="rel-grp k-imp"><h3><i>개선</i></h3><ul>
+          <li>산성비를 일시정지하면 입력 칸이 잠겨요. 멈춘 동안 미리 쳐 둘 수 없고, 치던 글자도 지워져요. <code>Esc</code>나 <b>계속하기</b>를 누르면 다시 입력할 수 있어요.</li>
+          <li>화면을 넓혀서 긴 명령어도 한 줄에 보여요 (최대 너비 980px → 1320px).</li>
+          <li>창이 좁아도 가로 스크롤바가 생기지 않아요. 긴 줄은 다음 줄로 넘어가서 보여요.</li>
+          <li>결과 화면의 <b>내가 친 명령어 뜻 보기</b> 목록도 긴 명령어를 줄 바꿈해서 보여줘요.</li>
+        </ul></div>
+      </article>
+      <article class="rel">
+        <div class="rel-head"><span class="ver">v1.2</span><span class="date">2026.10.24</span></div>
         <p class="rel-sum">모든 분류에 명령어가 늘었고, Tab 키로 들여쓰기를 할 수 있게 됐어요. 전체 용어가 542개에서 766개가 됐어요.</p>
         <div class="rel-grp k-new"><h3><i>새 기능</i></h3><ul>
           <li>입력 칸에서 <code>Tab</code>을 누르면 스페이스로 들여쓰기가 돼요. <code>Shift</code>+<code>Tab</code>은 한 칸 내어쓰기. Python은 4칸, Terraform과 YAML은 2칸씩 들어가요.</li>
@@ -1863,7 +1873,7 @@ $('#btnImport').onclick=()=>{
 
 /* ---------- views ---------- */
 let view='practice';
-const NOTES_VER='1.2';
+const NOTES_VER='1.3';
 $('#notesDot').hidden=store.get('seenNotes','')===NOTES_VER;
 function showView(v){
   view=v;
